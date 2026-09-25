@@ -35,8 +35,13 @@
             width: 100%;
             gap: 5px;
         }
-        .deLadinho{
+        .deLadinhoContainer{
             display: flex;
+            gap: 20px;
+        }
+        .emPe{
+            display: flex;
+            flex-direction: column;
         }
  
     </style> 
@@ -70,54 +75,71 @@
                 id="logradouro" 
             > 
     
-           <div class="deLadinho">
-                <label for="numero"> 
-                    Número 
-                </label> 
+           <div class="">
+                <div class="emPe">
+
+                        <div class="deLadinhoContainer">
+                            <div class="emPe">
+                                    <label for="numero"> 
+                                        Número 
+                                    </label> 
+                            
+                                    <input 
+                                        type="text" 
+                                        id="numero" 
+                                    > 
+                            </div>
+                    
+                            <div class="emPe">
+                                    <label for="bairro"> 
+                                        Bairro 
+                                    </label> 
+                            
+                                    <input 
+                                        type="text" 
+                                        id="bairro" 
+                                    > 
+                            </div>
+                        </div>
+                
+            
+                            <div class="deLadinhoContainer">
+                                <div class="emPe">
+                                    <label for="cidade"> 
+                                        Cidade 
+                                    </label> 
+                            
+                                    <input 
+                                        type="text" 
+                                        id="cidade" 
+                                    > 
+                                </div>
+
+                            
+                            
+                                <div class="emPe" >
+                                    <label for="estado"> 
+                                        Estado 
+                                    </label> 
+                            
+                                    <input 
+                                        type="text" 
+                                        id="estado" 
+                                    >
+                                </div>
+                        </div>
+                    </div>
+                </div>
         
-                <input 
-                    type="text" 
-                    id="numero" 
+                <button 
+                    type="button" 
+                    onclick="buscarCep()" 
                 > 
+                    Buscar CEP 
+                </button> 
         
-                <label for="bairro"> 
-                    Bairro 
-                </label> 
-        
-                <input 
-                    type="text" 
-                    id="bairro" 
-                > 
-           </div>
-    
-            <div class="deLadinho">
-                <label for="cidade"> 
-                    Cidade 
-                </label> 
-        
-                <input 
-                    type="text" 
-                    id="cidade" 
-                > 
-        
-                <label for="estado"> 
-                    Estado 
-                </label> 
-        
-                <input 
-                    type="text" 
-                    id="estado" 
-                > 
-            </div>
-    
-            <button 
-                type="button" 
-                onclick="buscarCep()" 
-            > 
-                Buscar CEP 
-            </button> 
-    
-            <p id="mensagem"></p> 
+                <p id="mensagem"></p>
+           </div> 
     
         </form> 
    </div>
